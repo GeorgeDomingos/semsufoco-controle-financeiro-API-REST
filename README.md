@@ -24,12 +24,11 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-layout">Layout</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-tecnologias">Tecnologias</a> •
+  <a href="#-endpoints-da-api">Endpoins da API</a> •
  <a href="#-contribuidores">Contribuidores</a> • 
- <a href="#-autor">Autor</a> • 
- <a href="#user-content--licença">Licença</a>
+ <a href="#-referências">Referências</a>
 </p>
 
 ## 💻 Sobre o projeto
@@ -62,23 +61,27 @@ Além disto é recomendável utilizar um editor para trabalhar com o código com
 
 ### Instalação
 
-```bash
+1. Clone este repositório:
 
-# Clone este repositório
-$ git clone git@github.com:GeorgeDomingos/semsufoco-controle-financeiro-API-REST.git
+    ```bash
+    git clone git@github.com:GeorgeDomingos/semsufoco-controle-financeiro-API-REST.git
+    ```
+2. Acesse a pasta do projeto no terminal/cmd:
+    ```bash
+    cd semsufoco-controle-financeiro-API-REST
+    ```
+3. Instale as bibliotecas necessárias utilizando o comando:
+    ```bash
+    npm i
+    ```
+4. Crie um arquivo chamado sensitiveDate.js com todas as variáveis listadas no arquivo sensitiveDateExample.js
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd semsufoco-controle-financeiro-API-REST
+5. Execute a aplicação em modo de desenvolvimento
+    ```bash
+    npm run dev
+    ```
+- O servidor inciará na porta:3000 - acesse http://localhost:3000 
 
-# Instale as bibliotecas necessárias utilizando o comando:
-$ npm i
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3000 - acesse http://localhost:3000 
-
-```
 ## 🛠 Tecnologias
 ![](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -95,6 +98,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - JSON Web Tokens (JWT) 
 - Nodemon
 
+## 📝 Endpoints da API
+
+
+
 ## 👨‍💻 Contribuidores
 
 <table>
@@ -104,6 +111,20 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
   </tr>
 </table>
+
+
+## 📚 Referências
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Node.js](https://nodejs.org/pt-br/docs) 
+- [Express](https://expressjs.com/pt-br/4x/api.html)
+- [PostgreSQL](https://www.postgresql.org/docs/)
+- [Node-postgres (pg)](https://node-postgres.com/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [JSON Web Tokens](https://jwt.io/introduction)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [Git](https://git-scm.com/docs)
+ 
+
 
 
 
