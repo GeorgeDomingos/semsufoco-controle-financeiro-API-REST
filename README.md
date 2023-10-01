@@ -58,7 +58,7 @@ O Sem$ufoco foi desenvolvido durante o desafio do terceiro módulo do Curso de D
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Além disto é recomendável utilizar um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/)
 
 ### Instalação
 
@@ -79,6 +79,36 @@ $ npm run dev:server
 # O servidor inciará na porta:3000 - acesse http://localhost:3000 
 
 ```
+## 🛠 Tecnologias
+![](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+
+As seguintes ferramentas foram usadas na construção do projeto:
+- Node.js
+- Express.js
+- PostgreSQL
+- Node-postgres (pg)
+- Bcrypt
+- JSON Web Tokens (JWT) 
+- Nodemon
+
+## 👨‍💻 Contribuidores
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/GeorgeDomingos"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>George Domingos</b></sub></a><br/></td>
+    <td align="center"><a href="https://github.com/EdEddAEddy"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>Edevando Alves</b></sub></a><br /></td>
+
+  </tr>
+</table>
+
+
+
+
+
 
 
 
