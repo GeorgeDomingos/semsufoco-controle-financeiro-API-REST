@@ -232,9 +232,7 @@ ___
 
 
 
-
-
-
+![tech(1)](https://github.com/GeorgeDomingos/semsufoco-controle-financeiro-API-REST/assets/136137653/97fcfe94-2b80-411e-b6ba-5166802577c0)
 
 
 
