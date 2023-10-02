@@ -29,22 +29,11 @@
 [Referências](#-referências) •
 [Contribuidores](#-contribuidores)
   
-<p align="center">
-  <a href="#-sobre-o-projeto">Sobre</a> •
-  <a href="#-funcionalidades">Funcionalidades</a> •
-  <a href="#-como-executar-o-projeto">Como executar</a> • 
-  <a href="#-tecnologias">Tecnologias</a> •
-  <a href="#-endpoints-da-api">Endpoins da API</a> •
-  <a href="#-implementações-futuras">  Implementações futuras</a> •
-  <a href="#-referências">Referências</a> •
-  <a href="#-contribuidores">Contribuidores</a>
-</p>
-
-## 💻 Sobre o projeto
+## 📂 Sobre o projeto
 
 O Sem$ufoco foi desenvolvido durante o desafio do terceiro módulo do Curso de Desenvolvimento de Software da Cubos Academy. O projeto foi criado para aplicar os conceitos de APIRESTful em JavaScript realizando as operações básicas como listagem, registro de transações e categorias, atualização de dados, exclusão e extrato de transações.
 
-## ⚙️ Funcionalidades
+## 💻 Funcionalidades
 - Usuários:
   - [x] Cadastrar usuário
   - [X] Login
@@ -61,14 +50,14 @@ O Sem$ufoco foi desenvolvido durante o desafio do terceiro módulo do Curso de D
   - [X] Obter extrato
   - [X] Filtrar transação por categoria
 
-## 🛣️ Como executar o projeto
+## 📋 Como executar o projeto
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é recomendável utilizar um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/)
 
-### Instalação
+### 📑 Instalação
 
 1. Clone este repositório:
 
@@ -107,7 +96,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - JSON Web Tokens (JWT) 
 - Nodemon
 
-## 📝 Endpoints da API
+## 📌 Endpoints da API
 ### Cadastrar usuário:
 
 **POST** `/usuario`
@@ -209,7 +198,7 @@ ___
 - Exibe o extrato financeiro do usuário.
 
 
-## Implementações futuras
+## 🔎 Implementações futuras
 
 - [ ] Incluir verificações para validação de entradas utilizando a biblioteca Joi
 - [ ] Refatorar as querys utilizando a biblioteca QueryBuilder Knex
