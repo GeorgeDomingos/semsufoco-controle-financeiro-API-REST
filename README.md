@@ -27,7 +27,7 @@
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> •
   <a href="#-endpoints-da-api">Endpoins da API</a> •
- <a href="#-implementaçoes-futuras">  Implementações futuras</a> •
+ <a href="#-implementações-futuras">  Implementações futuras</a> •
  <a href="#-referências">Referências</a> •
  <a href="#-contribuidores">Contribuidores</a> • 
 </p>
