@@ -27,8 +27,9 @@
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> •
   <a href="#-endpoints-da-api">Endpoins da API</a> •
+ <a href="#-implementaçoes-futuras">  Implementações futuras</a> •
+ <a href="#-referências">Referências</a> •
  <a href="#-contribuidores">Contribuidores</a> • 
- <a href="#-referências">Referências</a>
 </p>
 
 ## 💻 Sobre o projeto
@@ -103,7 +104,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 **POST** `/usuario`
 - Cria uma nova conta de usuário.
-- A requisição é feita com um objeto Json informando os dados do usuário, conforme o exemplo:
+- A requisição é feita com um objeto Json informando o nome, email e senha do usuário, conforme o exemplo:
 
     ```bash
     {
@@ -118,69 +119,95 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 **POST** `/login`
 
-- Cria uma nova conta bancária.
-- A requisição é feita com um objeto Json informando os dados do usuário. 
+- Realiza o login do usuário com base nas credenciais fornecidas.
+- A requisição é feita com um objeto Json informando email e senha do usuário, conforme o exemplo:
+  
+    ```bash
+    {
+    "email": "itamar_assumpcao@email.com", //exemplo
+    "senha": "123456", //exemplo
+    }
+    ```
 
-### Atualizar Conta:
+___
+  > As rotas a seguir exigem o token de autenticação do usuário logado, a intormação deve se informada no header em formato Bearer Token
+  > 
+___
 
-**PUT** `/contas/:numeroConta/usuario`
+### Detalhar usuário:
 
-- Atualiza as dados da conta.
-- A requisição do número de conta a ser atualizada é feita como parâmetro URL e os dados a serem alterados são passados através de um objeto Json. 
+**GET** `/usuario`
 
-### Excluir Conta:
+- Detalha os dados do usuário logado.
 
-**DELETE** `/contas/:numeroConta`
+### Atualizar usuário:
 
-- Exclui uma conta existente.
-- A requisição do número de conta a ser removida é feita como parâmetro URL. 
+**PUT** `/usuario`
+- Atualiza os dados do usuário logado
+- Analisa se o e-mail inserido está sendo utilizado por outro usuário e impede caso essa situação seja verificada
+- A requisição é feita com um objeto Json informando nome, email ou senha do usuário, conforme o exemplo:
+  
+    ```bash
+    {
+    "nome": "Jorge Ben Jor", //exemplo
+    "email": "jorge_ben@email.com", //exemplo
+    "senha": "123456", //exemplo
+    }
+    ```
+### Listar categorias:
+**GET** `/categoria`
+- Lista os nomes de todas as categorias de transações cadastradas na Sem$ufoco.
 
-### Depositar:
+### Listar transações:
+**GET** `/transacao`
+- Lista todas as transações cadastradas do usuário.
+- Poderá ser passado parâmetro tipo query para filtrar transações, conforme o exemplo:
+  
+  <pre>
+    GET/transacao?filtro[]=roupas&filtro[]=salários
+  </pre>
 
-**POST** `/transacoes/depositar`
+### Detalhar transações:
+**GET** `/transacao/:id`
+- Detalha uma transação específica a partir do seu id de cadastro;
+- O id da transação deverá ser passado como parâmetro de rota.
 
-- Realiza depósitos em uma conta existente.
-- A requisição é feita através de um objeto Json contendo número da conta e valor.
+### Cadastrar transação:
+**POST** `/transacao`
+- Registra uma nova transação.
+- A requisição é feita com um objeto Json informando a descrição, valor, data, id da categoria e tipo, conforme o exemplo:
 
-### Sacar:
+    ```bash
+    {
+    "descricao": "Salário", //exemplo
+    "valor": 500000, //exemplo (valor em centavos)
+    "data": "2022-03-24T15:30:00.000Z", //exemplo
+    "categoria_id": 6,
+    "tipo": "entrada 
+    }
+    ```
+### Atualizar transação 
+**PUT** `/transacao/:id`
+- Atualiza uma transação cadastrada
+- O id da transação deverá ser passado como parâmetro de rota.
 
-**POST** `/transacoes/sacar`
+### Excluir transação:
+**DELETE** `/transacao/:id`
+- Exclui uma transação cadastrada
+- O id da transação deverá ser passado como parâmetro de rota.
 
-- Realiza saques em uma conta.
-- A requisição é feita através de um objeto Json contendo número da conta, valor e senha  do usuário.
-
-### Transferir:
-
-**POST** `/transacoes/transferir`
-
-- Transfere valores de uma conta para outra.
-- A requisição é feita através de um objeto Json contendo número da conta origem, número da conta destino, valor e senha da conta origem.
-
-### Exibir saldo:
-
-**GET** `/contas/saldo`
-
-- Exibe o saldo da conta.
-- É utilizado um parâmetro tipo query informando númmero da conta e senha para liberação do acesso.
-
-### Exibir extrato:
-
-**GET** `/contas/extrato`
-
-- Exibe o extrato de movimentações da conta.
-- É utilizado um parâmetro tipo query informando númmero da conta e senha para liberação do acesso.
+### Obter extrato de transações:
+**GET** `/transacao/extrato`
+- Exibe o extrato financeiro do usuário.
 
 
+## Implementações futuras
 
-## 👨‍💻 Contribuidores
+- [ ] Incluir verificações para validação de entradas utilizando a biblioteca Joi
+- [ ] Refatorar as querys utilizando a biblioteca QueryBuilder Knex
+- [ ] Utilizar a biblioteca DotEnv para criação das variáveis de ambiente
+- [ ] Fazer o deploy da API 
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/GeorgeDomingos"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>George Domingos</b></sub></a><br/></td>
-    <td align="center"><a href="https://github.com/EdEddAEddy"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>Edevando Alves</b></sub></a><br /></td>
-
-  </tr>
-</table>
 
 
 ## 📚 Referências
@@ -193,7 +220,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [JSON Web Tokens](https://jwt.io/introduction)
 - [Nodemon](https://www.npmjs.com/package/nodemon)
 - [Git](https://git-scm.com/docs)
- 
+
+
+## 👨‍💻 Contribuidores
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/GeorgeDomingos"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>George Domingos</b></sub></a><br/></td>
+    <td align="center"><a href="https://github.com/EdEddAEddy"><img style="border-radius: 50%;" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="100px;" alt=""/><br /><sub><b>Edevando Alves</b></sub></a><br /></td>
+
+  </tr>
+</table>
 
 
 
