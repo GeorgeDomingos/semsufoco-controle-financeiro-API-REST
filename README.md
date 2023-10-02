@@ -20,14 +20,14 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/GeorgeDomingos/semsufoco-controle-financeiro-API-REST?style=social">
   </a>
 
-[Sobre o Projeto](-sobre-o-projeto)•
-[Funcionalidades](-funcionalidades)•
-[Como Executar o Projeto](#como-executar-o-projeto)•
-[Tecnologias](#tecnologias)•
-[Endpoints da API](#endpoints-da-api)•
-[Implementações Futuras](#implementações-futuras)•
-[Referências](#referências)•
-[Contribuidores](#contribuidores)
+[Sobre o Projeto](#-sobre-o-projeto)•
+[Funcionalidades](#-funcionalidades)•
+[Como Executar o Projeto](#-como-executar-o-projeto)•
+[Tecnologias](#-tecnologias)•
+[Endpoints da API](#-endpoints-da-api)•
+[Implementações Futuras](#-implementações-futuras)•
+[Referências](#-referências)•
+[Contribuidores](#-contribuidores)
   
 <p align="center">
   <a href="#-sobre-o-projeto">Sobre</a> •
