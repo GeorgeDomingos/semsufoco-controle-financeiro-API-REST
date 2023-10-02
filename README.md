@@ -20,7 +20,7 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/GeorgeDomingos/semsufoco-controle-financeiro-API-REST?style=social">
   </a>
 
-[Sobre o Projeto](#-sobre-o-projeto) •
+[Sobre](#-sobre-o-projeto) •
 [Funcionalidades](#-funcionalidades) •
 [Como Executar](#-como-executar-o-projeto) •
 [Tecnologias](#-tecnologias) •
@@ -57,7 +57,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
 Além disto é recomendável utilizar um editor para trabalhar com o código como o [VSCode](https://code.visualstudio.com/)
 
-### 📑 Instalação
+### Instalação
 
 1. Clone este repositório:
 
