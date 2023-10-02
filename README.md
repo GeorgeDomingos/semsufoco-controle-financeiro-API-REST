@@ -99,6 +99,76 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Nodemon
 
 ## 📝 Endpoints da API
+### Cadastrar usuário:
+
+**POST** `/usuario`
+- Cria uma nova conta de usuário.
+- A requisição é feita com um objeto Json informando os dados do usuário, conforme o exemplo:
+
+    ```bash
+    {
+    "nome": "Gilberto Gil", //exemplo
+    "email": "gilbertogil@email.com", //exemplo
+    "senha": "123456", //exemplo
+    }
+    ```
+
+
+### Login:
+
+**POST** `/login`
+
+- Cria uma nova conta bancária.
+- A requisição é feita com um objeto Json informando os dados do usuário. 
+
+### Atualizar Conta:
+
+**PUT** `/contas/:numeroConta/usuario`
+
+- Atualiza as dados da conta.
+- A requisição do número de conta a ser atualizada é feita como parâmetro URL e os dados a serem alterados são passados através de um objeto Json. 
+
+### Excluir Conta:
+
+**DELETE** `/contas/:numeroConta`
+
+- Exclui uma conta existente.
+- A requisição do número de conta a ser removida é feita como parâmetro URL. 
+
+### Depositar:
+
+**POST** `/transacoes/depositar`
+
+- Realiza depósitos em uma conta existente.
+- A requisição é feita através de um objeto Json contendo número da conta e valor.
+
+### Sacar:
+
+**POST** `/transacoes/sacar`
+
+- Realiza saques em uma conta.
+- A requisição é feita através de um objeto Json contendo número da conta, valor e senha  do usuário.
+
+### Transferir:
+
+**POST** `/transacoes/transferir`
+
+- Transfere valores de uma conta para outra.
+- A requisição é feita através de um objeto Json contendo número da conta origem, número da conta destino, valor e senha da conta origem.
+
+### Exibir saldo:
+
+**GET** `/contas/saldo`
+
+- Exibe o saldo da conta.
+- É utilizado um parâmetro tipo query informando númmero da conta e senha para liberação do acesso.
+
+### Exibir extrato:
+
+**GET** `/contas/extrato`
+
+- Exibe o extrato de movimentações da conta.
+- É utilizado um parâmetro tipo query informando númmero da conta e senha para liberação do acesso.
 
 
 
